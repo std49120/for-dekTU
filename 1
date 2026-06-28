@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลังแนวข้อสอบเข้าโรงเรียนเตรียมอุดมศึกษา</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Prompt', 'sans-serif'] },
+                    colors: {
+                        'tu-pink': '#FFB6C1',
+                        'tu-pink-dark': '#FF8DA1',
+                        'tu-pink-light': '#FFE4E8'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #FFB6C1;
+            color: white;
+            padding: 8px 0;
+            position: relative;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        /* Tab Animation */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+
+    <div class="marquee-container text-sm font-medium">
+        <div class="marquee-content">
+            🌸 ความพยายามไม่เคยทรยศใคร 🌸 สู้เพื่อพระเกี้ยว 🌸 อีกนิดเดียวเท่านั้น ทำได้แน่นอน! 🌸 อนาคตอยู่ที่มือเรา 🌸
+        </div>
+    </div>
+
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center gap-3">
+            <div class="w-12 h-12 bg-tu-pink-light text-tu-pink-dark rounded-full flex items-center justify-center font-bold text-xl border-2 border-tu-pink">
+                TU
+            </div>
+            <h1 class="text-xl font-bold text-gray-700">คลังแนวข้อสอบเตรียมอุดมฯ</h1>
+        </div>
+    </header>
+
+    <section class="bg-tu-pink-light py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+                คลังจำลองแนวข้อสอบเข้า <br> <span class="text-tu-pink-dark">โรงเรียนเตรียมอุดมศึกษา</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 bg-white/80 inline-block p-4 rounded-xl shadow-sm border-l-4 border-tu-pink-dark">
+                "แนวข้อสอบทุกชุดออกโดยทางเตรียมอุดมศึกษาทุกชุด เพื่อให้เด็กทุกคนมีสิทธิ์เตรียมตัวเข้าสอบโรงเรียนเตรียมอุดมศึกษาเท่าเทียมกัน"
+            </p>
+        </div>
+    </section>
+
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-12 w-full">
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <button onclick="openTab('track1')" id="btn-track1" class="tab-link px-6 py-3 rounded-full font-medium transition bg-tu-pink-dark text-white shadow-md">
+                🔬 วิทยาศาสตร์-คณิตศาสตร์
+            </button>
+            <button onclick="openTab('track2')" id="btn-track2" class="tab-link px-6 py-3 rounded-full font-medium transition bg-white text-gray-600 border border-gray-200 hover:border-tu-pink-dark">
+                🧮 ภาษา-คณิตศาสตร์ (ศิลป์-คำนวณ)
+            </button>
+            <button onclick="openTab('track3')" id="btn-track3" class="tab-link px-6 py-3 rounded-full font-medium transition bg-white text-gray-600 border border-gray-200 hover:border-tu-pink-dark">
+                🌍 ภาษา-ภาษาต่างประเทศ (ศิลป์-ภาษา)
+            </button>
+        </div>
+
+        <div id="track1" class="tab-content" style="display: block;">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <h3 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">ปีการศึกษา 2566</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
+                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">คณิตศาสตร์_วิทย์คณิต_ปี2566.pdf</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
+                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">วิทยาศาสตร์_วิทย์คณิต_ปี2566.pdf</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="track2" class="tab-content">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <h3 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">ปีการศึกษา 2566</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
+                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">คณิตศาสตร์_ศิลป์คำนวณ_ปี2566.pdf</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="track3" class="tab-content">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <h3 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">ปีการศึกษา 2566</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
+                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">ภาษาอังกฤษ_ศิลป์ภาษา_ปี2566.pdf</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t mt-auto py-10">
+        <div class="text-center">
+            <h3 class="text-3xl font-bold text-tu-pink-dark">"ขอให้โชคดีกับการสอบเข้า"</h3>
+        </div>
+    </footer>
+
+    <script>
+        function openTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+            document.querySelectorAll('.tab-link').forEach(l => {
+                l.classList.remove('bg-tu-pink-dark', 'text-white', 'shadow-md');
+                l.classList.add('bg-white', 'text-gray-600');
+            });
+            document.getElementById(tabId).style.display = 'block';
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('bg-white', 'text-gray-600');
+            activeBtn.classList.add('bg-tu-pink-dark', 'text-white', 'shadow-md');
+        }
+    </script>
+</body>
+</html>
