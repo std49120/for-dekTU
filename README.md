@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คลังแนวข้อสอบเข้าโรงเรียนเตรียมอุดมศึกษา</title>
+    <title>คลังจำลองแนวข้อสอบเข้า โรงเรียนเตรียมอุดมศึกษา</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,6 @@
         }
     </script>
     <style>
-        /* Marquee Animation */
         .marquee-container {
             overflow: hidden;
             white-space: nowrap;
@@ -41,7 +40,6 @@
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        /* Tab Animation */
         .tab-content {
             display: none;
             animation: fadeIn 0.4s ease-in-out;
@@ -54,7 +52,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
 
-    <div class="marquee-container text-sm font-medium">
+    <div class="marquee-container text-sm font-medium shadow-sm">
         <div class="marquee-content">
             🌸 ความพยายามไม่เคยทรยศใคร 🌸 สู้เพื่อพระเกี้ยว 🌸 อีกนิดเดียวเท่านั้น ทำได้แน่นอน! 🌸 อนาคตอยู่ที่มือเรา 🌸
         </div>
@@ -62,7 +60,7 @@
 
     <header class="bg-white shadow-sm sticky top-0 z-10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center gap-3">
-            <div class="w-12 h-12 bg-tu-pink-light text-tu-pink-dark rounded-full flex items-center justify-center font-bold text-xl border-2 border-tu-pink">
+            <div class="w-12 h-12 bg-tu-pink-light text-tu-pink-dark rounded-full flex items-center justify-center font-bold text-xl border-2 border-tu-pink shrink-0">
                 TU
             </div>
             <h1 class="text-xl font-bold text-gray-700">คลังแนวข้อสอบเตรียมอุดมฯ</h1>
@@ -71,7 +69,7 @@
 
     <section class="bg-tu-pink-light py-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
                 คลังจำลองแนวข้อสอบเข้า <br> <span class="text-tu-pink-dark">โรงเรียนเตรียมอุดมศึกษา</span>
             </h2>
             <p class="text-lg md:text-xl text-gray-700 bg-white/80 inline-block p-4 rounded-xl shadow-sm border-l-4 border-tu-pink-dark">
@@ -94,50 +92,106 @@
             </button>
         </div>
 
-        <div id="track1" class="tab-content" style="display: block;">
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <h3 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">ปีการศึกษา 2566</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
-                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">คณิตศาสตร์_วิทย์คณิต_ปี2566.pdf</span>
-                    </a>
-                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
-                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">วิทยาศาสตร์_วิทย์คณิต_ปี2566.pdf</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div id="track2" class="tab-content">
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <h3 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">ปีการศึกษา 2566</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
-                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">คณิตศาสตร์_ศิลป์คำนวณ_ปี2566.pdf</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div id="track3" class="tab-content">
-            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-                <h3 class="text-2xl font-bold text-gray-700 mb-4 border-b pb-2">ปีการศึกษา 2566</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <a href="#" class="flex items-center gap-3 p-4 rounded-xl border border-tu-pink-light bg-pink-50 hover:bg-tu-pink-light transition group">
-                        <span class="text-2xl">📄</span><span class="font-medium group-hover:text-tu-pink-dark">ภาษาอังกฤษ_ศิลป์ภาษา_ปี2566.pdf</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div id="exam-container"></div>
     </main>
 
-    <footer class="bg-white border-t mt-auto py-10">
+    <footer class="bg-white border-t border-gray-200 mt-auto py-10">
         <div class="text-center">
             <h3 class="text-3xl font-bold text-tu-pink-dark">"ขอให้โชคดีกับการสอบเข้า"</h3>
+            <p class="text-gray-400 text-sm mt-4">&copy; เว็บไซต์จำลองสำหรับเตรียมตัวสอบเข้าโรงเรียนเตรียมอุดมศึกษา</p>
         </div>
     </footer>
 
     <script>
+        // โครงสร้างข้อมูลข้อสอบทั้งหมด
+        const examData = {
+            track1: {
+                id: 'track1',
+                title: 'สายวิทยาศาสตร์-คณิตศาสตร์ (วิทย์-คณิต)',
+                desc: '',
+                subjects: ['ไทย1', 'สังคม', 'คณิต', 'วิทย์', 'อังกฤษ1']
+            },
+            track2: {
+                id: 'track2',
+                title: 'สายภาษา-คณิตศาสตร์ (ศิลป์-คำนวณ)',
+                desc: '',
+                subjects: ['คณิต', 'สังคม', 'ไทย1', 'ไทย2', 'อังกฤษ']
+            },
+            track3: {
+                id: 'track3',
+                title: 'สายภาษา-ภาษาต่างประเทศ (ศิลป์-ภาษา)',
+                desc: '( ศิลป์ญี่ปุ่น / ศิลป์ฝรั่งเศส / ศิลป์เยอรมัน / ศิลป์เกาหลี / ศิลป์สเปน / ศิลป์จีน )',
+                subjects: ['ไทย1', 'ไทย2', 'อังกฤษ1', 'อังกฤษ2', 'สังคม']
+            }
+        };
+
+        const years = [2568, 2567, 2566];
+        const sets = ['ชุดที่ 1', 'ชุดที่ 2', 'ชุดที่ 3'];
+
+        // ฟังก์ชันสร้างหน้าต่างข้อสอบอัตโนมัติ
+        function renderExams() {
+            const container = document.getElementById('exam-container');
+            let htmlContent = '';
+
+            for (const key in examData) {
+                const track = examData[key];
+                
+                htmlContent += `<div id="${track.id}" class="tab-content">`;
+                
+                // ใส่คำอธิบาย (ถ้ามี) เช่น ของศิลป์-ภาษา
+                if(track.desc) {
+                    htmlContent += `<div class="text-center mb-8">
+                                        <h3 class="text-2xl font-bold text-gray-700">${track.title}</h3>
+                                        <p class="text-tu-pink-dark font-medium mt-2 bg-tu-pink-light inline-block px-4 py-1 rounded-full">${track.desc}</p>
+                                    </div>`;
+                }
+
+                htmlContent += `<div class="space-y-8">`;
+
+                // วนลูปสร้างปี พ.ศ.
+                years.forEach(year => {
+                    htmlContent += `
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <h4 class="text-xl font-bold text-gray-700 mb-6 border-b pb-2 flex items-center gap-2">
+                                📅 ปีการศึกษา ${year}
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    `;
+
+                    // วนลูปสร้างวิชา
+                    track.subjects.forEach(subject => {
+                        htmlContent += `
+                            <div class="bg-pink-50 rounded-xl p-4 border border-tu-pink-light">
+                                <h5 class="font-bold text-gray-800 mb-3 border-b border-pink-200 pb-1">📚 ${subject}</h5>
+                                <ul class="space-y-2">
+                        `;
+                        
+                        // วนลูปสร้างชุดข้อสอบ (3 ชุด)
+                        sets.forEach(set => {
+                            const fileName = `${subject}_${year}_${set.replace(/\s+/g, '')}.pdf`;
+                            htmlContent += `
+                                <li>
+                                    <a href="#" class="flex items-center gap-2 text-sm text-gray-600 hover:text-tu-pink-dark transition group">
+                                        <span class="text-lg">📄</span> 
+                                        <span class="font-medium underline-offset-2 group-hover:underline">จำลอง${set}</span>
+                                    </a>
+                                </li>
+                            `;
+                        });
+
+                        htmlContent += `</ul></div>`; // ปิดการ์ดวิชา
+                    });
+
+                    htmlContent += `</div></div>`; // ปิดการ์ดปี
+                });
+
+                htmlContent += `</div></div>`; // ปิด tab-content
+            }
+            
+            container.innerHTML = htmlContent;
+        }
+
+        // ฟังก์ชันสลับ Tab
         function openTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
             document.querySelectorAll('.tab-link').forEach(l => {
@@ -145,10 +199,15 @@
                 l.classList.add('bg-white', 'text-gray-600');
             });
             document.getElementById(tabId).style.display = 'block';
+            
             const activeBtn = document.getElementById('btn-' + tabId);
             activeBtn.classList.remove('bg-white', 'text-gray-600');
             activeBtn.classList.add('bg-tu-pink-dark', 'text-white', 'shadow-md');
         }
+
+        // รันคำสั่งสร้างข้อสอบตอนโหลดหน้าเว็บ และเปิดแท็บแรก (วิทย์-คณิต) อัตโนมัติ
+        renderExams();
+        openTab('track1');
     </script>
 </body>
 </html>
